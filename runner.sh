@@ -3,7 +3,7 @@
 git clone https://github.com/axelw/project-template.git "$1"
 
 if [ "$?" = 0 ]; then
-	grunt --gruntfile=createproject.js __finishProjectTemplate
+	grunt --gruntfile=crpr.js __finishProjectTemplate
 	if [ "$?" = 0 ]; then
 		cd "$1"
 		npm install

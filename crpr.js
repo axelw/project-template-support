@@ -27,13 +27,13 @@ module.exports = function(grunt) {
 		grunt.log.writeln();
 		grunt.log.writeln('--password=<pwd>	: password of database user. Defaults to <projectname> and is saved in <projectname>.json');
 		grunt.log.writeln();
-		grunt.log.writeln('Usage example: grunt --gruntfile=createproject.js --name=test --db=mydb --user=me --password=secret');
+		grunt.log.writeln('Usage example: grunt --gruntfile=crpr.js --name=test --db=mydb --user=me --password=secret');
 	});
 
 	function exit(msg, opt){
 		if ( opt ) opt.print();
 		grunt.log.writeln();
-		grunt.fail.fatal(msg + '\nUse \'grunt help\' for help.\n');
+		grunt.fail.fatal(msg + '\nUse \'grunt --gruntfile=crpr.js help\' for help.\n');
 	};
 
 	function decorate(p){
