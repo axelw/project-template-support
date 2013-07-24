@@ -7,12 +7,12 @@ Clones and updates project-template according to user provided information.
 
 After cloning this repo, `grunt --gruntfile crpr.js` is to be called. 
 
-It takes one or more of the following arguments:
+The following arguments are accepted:
 
 	--name=<projectname>: 	specifies the name of the project. A folder of the same name is created
 							in the folder specified by --path. If an item of that name already
 							exists,	a message will be printed and the task exits,
-							This is the only **mandatory** parameter.
+							This is the only mandatory parameter.
 
 	--path=<path>		: 	specifies the parent folder in which the project is to be created. 
 							If not	given, the project is created in the current working directory. 
@@ -27,7 +27,11 @@ It takes one or more of the following arguments:
 	--password=<pwd>	:	password of database user. Defaults to <projectname> and is 
 							saved in <projectname>.json
 
-Usage example: grunt --gruntfile=crpr.js --name=test --db=mydb --user=me --password=secret
+Usage example:   
+`grunt --gruntfile=crpr.js --name=test --db=mydb --user=me --password=secret`
+
+`grunt --gruntfile=crpr.js help` prints the list of possible arguments.
+
 
 ==================
 
@@ -35,7 +39,7 @@ This should have been it. Unfortunately, I was not able to execute any steps aft
 the project-template repo. It seems to me that the grunt task is already finished when cloning
 is finally done, and therefore the respective callbacks are never called. So, it turns into a 
 
-##Weird hack: 
+###weird hack: 
 
 to accomplish manipulation of cloned template files (that is, writing user provided arguments
 at appropriate places), the `runner.sh` is called from within the `crpr.js` gruntfile. 
